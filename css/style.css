@@ -7,9 +7,147 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #ffffff; /* Fundo branco */
     color: #333;
     line-height: 1.6;
+}
+
+/* Adicione estas regras no início do arquivo CSS */
+
+/* Estilos para a logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-height: 80px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.header-text {
+    text-align: center;
+}
+
+/* Melhorias no alinhamento de containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento uniforme entre seções */
+}
+
+.product-grid, .order-summary, .ticket {
+    display: grid;
+    gap: 15px; /* Espaçamento consistente */
+}
+
+/* Destacar a seção de senha */
+.ticket-number {
+    background-color: #d40000;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Melhorar a hierarquia visual */
+.ticket {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.ticket-header {
+    background-color: #d40000;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.ticket-body {
+    padding: 25px;
+}
+
+.ticket-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ticket-total {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+/* Adicione ao seu arquivo CSS */
+.ticket-highlight {
+    background-color: #fff8f8;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px dashed #d40000;
+    border-bottom: 2px dashed #d40000;
+    margin: 20px 0;
+}
+
+.ticket-label {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.ticket-number {
+    background-color: #d40000;
+    color: white;
+    padding: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 200px;
+    border-radius: 8px;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: pulse 2s infinite;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo {
+        max-height: 60px;
+    }
+    
+    .ticket-number {
+        font-size: 24px;
+        padding: 15px;
+    }
 }
 
 .container {
@@ -19,16 +157,16 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: white;
 }
 
 header {
-    background-color: #ff0000;
+    background-color: #d40000; /* Vermelho */
     color: white;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -61,7 +199,7 @@ body.inicio main {
 
 .welcome-message h2 {
     font-size: 24px;
-    color: #0078d7;
+    color: #d40000; /* Vermelho */
     margin-bottom: 10px;
 }
 
@@ -71,7 +209,7 @@ body.inicio main {
 
 .start-button {
     display: inline-block;
-    background-color: #0078d7;
+    background-color: #d40000; /* Vermelho */
     color: white;
     text-decoration: none;
     padding: 15px 30px;
@@ -79,14 +217,15 @@ body.inicio main {
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .start-button:hover {
-    background-color: #005fa3;
+    background-color: #b30000; /* Vermelho mais escuro */
 }
 
 .instructions {
-    background-color: rgb(255, 0, 0);
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     margin-top: 30px;
@@ -94,16 +233,17 @@ body.inicio main {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .instructions h3 {
-    color: #0078d7;
+    color: #d40000; /* Vermelho */
     margin-bottom: 10px;
 }
 
 .instructions ol {
     padding-left: 20px;
-
 }
 
 .instructions li {
@@ -129,16 +269,22 @@ body.produtos .container {
     border: 1px solid #ddd;
     border-radius: 8px 0 0 8px;
     font-size: 16px;
+    border: 2px solid #d40000; /* Vermelho */
 }
 
 #searchButton {
     padding: 0 20px;
-    background-color: #0078d7;
+    background-color: #d40000; /* Vermelho */
     color: white;
     border: none;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #b30000; /* Vermelho mais escuro */
 }
 
 .product-grid {
@@ -156,6 +302,7 @@ body.produtos .container {
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
+    border: 1px solid #e0e0e0;
 }
 
 .product-card:hover {
@@ -180,14 +327,14 @@ body.produtos .container {
 }
 
 .product-price {
-    color: #0078d7;
+    color: #d40000; /* Vermelho */
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .add-to-cart {
-    background-color: #0078d7;
+    background-color: #d40000; /* Vermelho */
     color: white;
     border: none;
     padding: 10px;
@@ -199,7 +346,7 @@ body.produtos .container {
 }
 
 .add-to-cart:hover {
-    background-color: #005fa3;
+    background-color: #b30000; /* Vermelho mais escuro */
 }
 
 .cart-container {
@@ -210,6 +357,7 @@ body.produtos .container {
     align-self: start;
     position: sticky;
     top: 20px;
+    border: 1px solid #e0e0e0;
 }
 
 .cart-header {
@@ -227,7 +375,7 @@ body.produtos .container {
 }
 
 .cart-count {
-    background-color: #0078d7;
+    background-color: #d40000; /* Vermelho */
     color: white;
     border-radius: 50%;
     width: 25px;
@@ -266,6 +414,7 @@ body.produtos .container {
 .cart-item-price {
     font-weight: bold;
     margin-left: 10px;
+    color: #d40000; /* Vermelho */
 }
 
 .cart-total {
@@ -275,10 +424,11 @@ body.produtos .container {
     margin-bottom: 15px;
     padding-top: 10px;
     border-top: 1px solid #eee;
+    color: #d40000; /* Vermelho */
 }
 
 .checkout-btn {
-    background-color: #28a745;
+    background-color: #d40000; /* Vermelho */
     color: white;
     border: none;
     padding: 12px;
@@ -293,7 +443,7 @@ body.produtos .container {
 }
 
 .checkout-btn:hover {
-    background-color: #218838;
+    background-color: #b30000; /* Vermelho mais escuro */
 }
 
 .checkout-btn:disabled {
@@ -312,10 +462,11 @@ body.checkout .container {
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
 }
 
 .order-summary h2 {
-    color: #0078d7;
+    color: #d40000; /* Vermelho */
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
@@ -335,12 +486,18 @@ body.checkout .container {
     border-bottom: 1px solid #f5f5f5;
 }
 
+.order-item-price {
+    color: #d40000; /* Vermelho */
+    font-weight: bold;
+}
+
 .order-total {
     font-weight: bold;
     font-size: 20px;
     text-align: right;
     padding-top: 10px;
     border-top: 1px solid #eee;
+    color: #d40000; /* Vermelho */
 }
 
 .checkout-actions {
@@ -369,13 +526,14 @@ body.checkout .container {
 }
 
 .confirm-btn {
-    background-color: #28a745;
+    background-color: #d40000; /* Vermelho */
     color: white;
     border: none;
+    transition: background-color 0.3s;
 }
 
 .confirm-btn:hover {
-    background-color: #218838;
+    background-color: #b30000; /* Vermelho mais escuro */
 }
 
 /* Tela de Pedido Finalizado */
@@ -385,7 +543,7 @@ body.finalizado .container {
 }
 
 .order-complete h2 {
-    color: #0078d7;
+    color: #d40000; /* Vermelho */
     margin-bottom: 20px;
 }
 
@@ -396,10 +554,11 @@ body.finalizado .container {
     margin: 20px auto;
     max-width: 400px;
     overflow: hidden;
+    border: 1px solid #e0e0e0;
 }
 
 .ticket-header {
-    background-color: #0078d7;
+    background-color: #d40000; /* Vermelho */
     color: white;
     padding: 15px;
     font-weight: bold;
@@ -417,12 +576,18 @@ body.finalizado .container {
     font-size: 14px;
 }
 
+.ticket-item-price {
+    color: #d40000; /* Vermelho */
+    font-weight: bold;
+}
+
 .ticket-total {
     font-weight: bold;
     padding: 15px;
     border-top: 1px dashed #ddd;
     text-align: right;
     font-size: 18px;
+    color: #d40000; /* Vermelho */
 }
 
 .ticket-number {
@@ -430,12 +595,12 @@ body.finalizado .container {
     padding: 15px;
     font-size: 24px;
     font-weight: bold;
-    color: #0078d7;
+    color: #d40000; /* Vermelho */
 }
 
 .instructions {
     margin: 20px 0;
-    color: #ffffff;
+    color: #666;
 }
 
 .complete-actions {
@@ -456,12 +621,13 @@ body.finalizado .container {
 }
 
 .new-order-btn {
-    background-color: #0078d7;
+    background-color: #d40000; /* Vermelho */
     color: white;
+    transition: background-color 0.3s;
 }
 
 .new-order-btn:hover {
-    background-color: #005fa3;
+    background-color: #b30000; /* Vermelho mais escuro */
 }
 
 .home-btn {

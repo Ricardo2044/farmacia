@@ -7,34 +7,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="finalizado">
-    <div class="container">
-        <header>
-            <h1>Farmácia Digital</h1>
-            <p>Pedido Finalizado</p>
-        </header>
-        
-        <div class="order-complete">
-            <h2>Obrigado por sua compra!</h2>
-            <div class="ticket">
-                <div class="ticket-header">Seu Pedido</div>
-                <div class="ticket-body" id="ticketItems">
-                    <!-- Itens do pedido serão carregados via JavaScript -->
-                </div>
-                <div class="ticket-total" id="ticketTotal">Total: R$ 0,00</div>
-                <div class="ticket-number" id="ticketNumber">Senha: A-000</div>
-            </div>
-            
-            <p class="instructions">
-                Por favor, aguarde no local enquanto preparamos seu pedido.<br>
-                Você será chamado pela senha acima.
-            </p>
-            
-            <div class="complete-actions">
-                <a href="produtos.html" class="new-order-btn">Fazer Novo Pedido</a>
-                <a href="index.html" class="home-btn">Voltar ao Início</a>
-            </div>
+    <div class="order-complete">
+    <h2>Obrigado por sua compra!</h2>
+    <div class="ticket">
+        <div class="ticket-header">Comprovante de Pedido</div>
+        <div class="ticket-body" id="ticketItems">
+            <!-- Itens serão preenchidos por JavaScript -->
+        </div>
+        <div class="ticket-total" id="ticketTotal">Total: R$ 0,00</div>
+        <div class="ticket-highlight">
+            <div class="ticket-label">Sua senha para retirada:</div>
+            <div class="ticket-number" id="ticketNumber">A-000</div>
         </div>
     </div>
+    
+    <p class="instructions">
+        Por favor, aguarde no local enquanto preparamos seu pedido.<br>
+        Você será chamado pela senha acima.
+    </p>
+    
+    <div class="complete-actions">
+        <a href="produtos.html" class="new-order-btn">Fazer Novo Pedido</a>
+        <a href="index.html" class="home-btn">Voltar ao Início</a>
+    </div>
+</div>
     
     <script src="js/script.js"></script>
 </body>
