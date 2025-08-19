@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +9,14 @@
 <body class="inicio">
     <div class="container">
         <header>
-    <div class="logo-container">
-        <img src="8db0a9e6-ef19-4d7c-a4e5-17f8e2e1061b.jpg" alt="Logo da Farmácia" class="logo">
-        <div class="header-text">
-            <h1>Farmácia Digital</h1>
-            <p>Sistema de Autoatendimento</p>
-        </div>
-    </div>
-</header>
+            <div class="logo-container">
+                <img src="8db0a9e6-ef19-4d7c-a4e5-17f8e2e1061b.jpg" alt="Logo da Farmácia Digital" class="logo">
+                <div class="header-text">
+                    <h1>Farmácia Digital</h1>
+                    <p>Sistema de Autoatendimento</p>
+                </div>
+            </div>
+        </header>
         
         <main>
             <div class="welcome-message">
@@ -40,8 +40,23 @@
         </main>
         
         <footer>
-            <p>Farmácia Digital © 2023 - Atendimento Automático</p>
+            <p>Farmácia Digital © <span id="year"></span> - Atendimento Automático</p>
+            
+            <!-- Botão de contato (WhatsApp) -->
+            <div class="contact-container">
+                <a href="https://wa.me/5521990699910" 
+                   class="contact-button" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   📞 Falar no WhatsApp
+                </a>
+            </div>
         </footer>
     </div>
+
+    <script>
+        // Ano automático
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
